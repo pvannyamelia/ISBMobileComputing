@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                 tvProcess.text = text.dropLast(1)
             }
 
-            tvResult.text = ""
+            equals()
         }
 
         btnSquare.setOnClickListener{
@@ -150,6 +150,7 @@ class MainActivity : AppCompatActivity() {
             tvProcess.append(s)
             tvResult.text = ""
         }
+        equals()
     }
 
     fun equals(): String {
