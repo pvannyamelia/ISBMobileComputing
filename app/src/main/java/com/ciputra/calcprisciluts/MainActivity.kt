@@ -142,8 +142,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun evaluateExpression(s: String, clear: Boolean) {
-        val tvResult: TextView = findViewById(R.id.tvResult)
-        val tvProcess: TextView = findViewById(R.id.tvProcess)
         if(clear){
             tvResult.text = ""
             tvProcess.append(s)
