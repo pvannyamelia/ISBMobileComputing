@@ -122,22 +122,27 @@ class MainActivity : AppCompatActivity() {
         btnSquare.setOnClickListener{
             var string: String = equals()
             tvResult.text = string.toDouble().pow(2).toString()
+            tvProcess.text = tvResult.text.toString()
         }
         btnSqrt.setOnClickListener{
             var string: String = equals()
             tvResult.text = sqrt(string.toDouble()).toString()
+            tvProcess.text = tvResult.text.toString()
         }
         btnFloor.setOnClickListener{
             var string: String = equals()
             tvResult.text = floor(string.toDouble()).toInt().toString()
+            tvProcess.text = tvResult.text.toString()
         }
         btnRound.setOnClickListener{
             var string: String = equals()
             tvResult.text = "%.1f".format(string.toDouble())
+            tvProcess.text = tvResult.text.toString()
         }
         btnCeiling.setOnClickListener{
             var string: String = equals()
             tvResult.text = ceil(string.toDouble()).toInt().toString()
+            tvProcess.text = tvResult.text.toString()
         }
     }
 
