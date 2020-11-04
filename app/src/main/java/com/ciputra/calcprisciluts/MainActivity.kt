@@ -155,10 +155,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun equals(): String {
-        if ((tvProcess.text.toString() == "") || (tvProcess.text.last().toString() in arrayOf(".", "/", "+", "-", "*"))){
+        var text = tvProcess.text.toString()
+        if ((tvProcess.text.toString() != "") && (tvProcess.text.last().toString() in arrayOf(".", "/", "+", "-", "*"))){
             tvProcess.text = tvProcess.text.toString().dropLast(1)
+        }else if(tvProcess.text.toString()==""){
+            text = "0"
         }
-        val text = tvProcess.text.toString()
         val expression = ExpressionBuilder(text).build()
 
         val result = expression.evaluate()
